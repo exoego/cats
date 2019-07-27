@@ -21,7 +21,7 @@ trait ByteBounded extends LowerBounded[Byte] with UpperBounded[Byte] {
 
 class ByteOrder extends Order[Byte] with Hash[Byte] with ByteBounded { self =>
 
-  def hash(x: Byte): Int = x.hashCode()
+  def hash(x: Byte): Int = x.##
 
   def compare(x: Byte, y: Byte): Int =
     if (x < y) -1 else if (x > y) 1 else 0

@@ -21,7 +21,7 @@ trait ShortBounded extends LowerBounded[Short] with UpperBounded[Short] {
 
 class ShortOrder extends Order[Short] with Hash[Short] with ShortBounded { self =>
 
-  def hash(x: Short): Int = x.hashCode()
+  def hash(x: Short): Int = x.##
   // use java.lang.Short.compare if we can rely on java >= 1.7
   def compare(x: Short, y: Short): Int =
     if (x < y) -1 else if (x > y) 1 else 0

@@ -15,7 +15,7 @@ class DoubleGroup extends CommutativeGroup[Double] {
 
 class DoubleOrder extends Order[Double] with Hash[Double] {
 
-  def hash(x: Double): Int = x.hashCode()
+  def hash(x: Double): Int = x.##
   def compare(x: Double, y: Double): Int =
     java.lang.Double.compare(x, y)
 

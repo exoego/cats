@@ -21,7 +21,7 @@ trait LongBounded extends LowerBounded[Long] with UpperBounded[Long] {
 
 class LongOrder extends Order[Long] with Hash[Long] with LongBounded { self =>
 
-  def hash(x: Long): Int = x.hashCode()
+  def hash(x: Long): Int = x.##
 
   // use java.lang.Long.compare if we can rely on java >= 1.7
   def compare(x: Long, y: Long): Int =

@@ -26,7 +26,7 @@ class FloatGroup extends CommutativeGroup[Float] {
  */
 class FloatOrder extends Order[Float] with Hash[Float] {
 
-  def hash(x: Float): Int = x.hashCode()
+  def hash(x: Float): Int = x.##
 
   def compare(x: Float, y: Float): Int =
     java.lang.Float.compare(x, y)

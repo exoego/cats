@@ -14,7 +14,7 @@ trait BooleanBounded extends LowerBounded[Boolean] with UpperBounded[Boolean] {
 
 class BooleanOrder extends Order[Boolean] with Hash[Boolean] with BooleanBounded { self =>
 
-  def hash(x: Boolean): Int = x.hashCode()
+  def hash(x: Boolean): Int = x.##
   def compare(x: Boolean, y: Boolean): Int =
     if (x == y) 0 else if (x) 1 else -1
 

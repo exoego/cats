@@ -20,7 +20,7 @@ trait IntBounded extends LowerBounded[Int] with UpperBounded[Int] {
 }
 
 class IntOrder extends Order[Int] with Hash[Int] with IntBounded { self =>
-  def hash(x: Int): Int = x.hashCode()
+  def hash(x: Int): Int = x.##
   def compare(x: Int, y: Int): Int =
     if (x < y) -1 else if (x > y) 1 else 0
 
